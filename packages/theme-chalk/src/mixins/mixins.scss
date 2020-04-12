@@ -1,0 +1,34 @@
+@import "./config.scss";
+
+
+@mixin b($block) {
+    // pm-tag
+    $B: $namespace+'-'+$block !global;
+    // .pm-tag
+    .#{$B} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    $selector: &;
+    $currentSelector: "";
+    @each $unit in $modifier {
+        $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","}; 
+    }
+    @at-root {
+        #{$currentSelector} {
+            @content;
+        }
+    }
+}
+
+// 是否有某样东西
+@mixin when($state) {
+    @at-root {
+        // is-hit
+        &.#{$state-prefix + $state} {
+            @content;
+        }
+    }
+}
