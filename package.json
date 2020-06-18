@@ -27,12 +27,13 @@
     "dist": "npm run clean && npm run lib && npm run build:theme"
   },
   "dependencies": {
-  },
-  "peerDependencies": {
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.1",
     "core-js": "^3.6.4"
+  },
+  "peerDependencies": {
+    
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.26.0",

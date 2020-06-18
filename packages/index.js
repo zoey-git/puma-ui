@@ -1,7 +1,9 @@
 import Tag from './tag/index'
+import Input from './input/index'
 
 const components = [
-    Tag
+    Tag,
+    Input
 ]
 
 const install = function(Vue, opts = {}) {
